@@ -1,6 +1,8 @@
 Rift Dev Tracker to Twitter Bot
 See LICENSE for license details.
 
+See live version @ https://twitter.com/RiftDevTracker
+
 Perl is required.  The following Perl modules are also required.  Install them
 via CPAN or your distribution's package manager if available:
 
