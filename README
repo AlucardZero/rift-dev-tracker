@@ -1,0 +1,42 @@
+Rift Dev Tracker to Twitter Bot
+See LICENSE for license details.
+
+Perl is required.  The following Perl modules are also required.  Install them
+via CPAN or your distribution's package manager if available:
+
+* Net::Twitter
+* XML::RSS::Parser
+* LWP::UserAgent
+* Unicode::Normalize
+* XML::LibXML
+* Date::Parse
+* WWW::Shorten
+* Proc::Daemon
+* IO::Handle
+* Config::Simple
+* Cwd
+
+A Twitter development application is required for posting to Twitter. Register
+and set up a Twitter account and also create an application at
+https://dev.twitter.com/apps . You will need to enter your consumer key,
+consumer secret, access token, and access token secret into the config file
+(rdt.conf in the same directory as rdt.pl).
+
+Once the Twitter dev app is set up and the perl modules are installed, simply 
+cd in and run "perl rdt.pl".
+
+The bot will wait 15 minutes and then check for new posts at the RSS URL set in
+the config file.  It will post any new titles to Twitter, then wait about 15
+minutes and repeat. 
+
+Note that at least for Rift, there is a delay before dev posts get on to the dev
+tracker of at least 10 minutes, and there also is a TTL of 60 minutes on the RSS
+feed.  Combined with the bot's built-in rate limiting, you must expect some time
+to pass before dev tracker posts are tweeted.
+
+A log file is created at ./rdt.log. Verbosity can be increased in the config 
+file by setting DEBUG to "1" for activity logging or "2" for that and verbose 
+post title logging as well.
+
+Some considerations have been made for extending this code to other RSS feeds,
+but they have not been tested.

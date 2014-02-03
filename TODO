@@ -1,0 +1,3 @@
+* A way to test before production
+* Improve error handling / recovery
+* Genericize / modularize for other RSS feeds
