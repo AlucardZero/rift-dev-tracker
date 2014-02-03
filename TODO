@@ -1,3 +1,4 @@
 * A way to test before production
+* Unicode may still break it
 * Improve error handling / recovery
 * Genericize / modularize for other RSS feeds
