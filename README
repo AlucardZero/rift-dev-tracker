@@ -22,8 +22,8 @@ https://dev.twitter.com/apps . You will need to enter your consumer key,
 consumer secret, access token, and access token secret into the config file
 (rdt.conf in the same directory as rdt.pl).
 
-Once the Twitter dev app is set up and the perl modules are installed, simply 
-cd in and run "perl rdt.pl".
+Once the Twitter dev app is set up, the perl modules are installed, and the
+config file is filled in, simply cd in and run "perl rdt.pl".
 
 The bot will wait 15 minutes and then check for new posts at the RSS URL set in
 the config file.  It will post any new titles to Twitter, then wait about 15
