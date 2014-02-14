@@ -123,7 +123,7 @@ while ($continue) {
       };
       if ( $@ ) { 
         print localtime . ": Failed to send tweet. '$@' $lastdate\n"; 
-        if ($@ =~ /^Status is a duplicate\./) { # no tweet and not a dupe, try again later
+        if ($@ !~ /^Status is a duplicate\./) { # no tweet and not a dupe, try again later
           $lastdate -= 1; 
           $errcount++;
           last; 
